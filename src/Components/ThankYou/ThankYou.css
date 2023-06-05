@@ -1,0 +1,39 @@
+.thank-you-section {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  animation-name: enter;
+  animation-duration: 2s;
+}
+
+.thank-msg {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+.success-msg {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: hsl(279, 6%, 55%);
+}
+
+.btn-continue {
+  width: 100%;
+  color: #fff;
+  font-size: 1.8rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #000;
+  border: none;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+
+@keyframes enter{
+  0%{opacity: 0;transform: scale(1.2);}
+  100%{opacity: 1;transform: scale(1);}
+}

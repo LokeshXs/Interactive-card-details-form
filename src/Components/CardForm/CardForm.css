@@ -1,0 +1,72 @@
+.cardForm{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 45%;
+}
+
+
+
+.label{
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+
+input{
+  border: 2px solid hsl(270, 3%, 87%);
+  font-size: 1.6rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  
+}
+
+.input-container{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  /* width: 70%; */
+}
+
+.input-container__parallel{
+  display: flex;
+  gap: 2rem;
+  /* width: 70%; */
+}
+.expiryDate-inputs{
+  display: flex;
+  gap: 1rem;
+}
+
+.expiryDate-inputs input{
+
+  width:100%;
+}
+
+
+.input-container-fieldset{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-btn{
+  /* width: 70%; */
+  border-radius: 1rem;
+  padding: 1.6rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 500;
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+
+.error-message{
+  color: red;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
