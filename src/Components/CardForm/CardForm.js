@@ -1,6 +1,5 @@
-import React, { useState, useRef, useEffect} from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./CardForm.css";
-
 
 const CardForm = (props) => {
   const fullName = useRef();
@@ -20,8 +19,6 @@ const CardForm = (props) => {
   const [cardCvv, setCardCvv] = useState("");
 
   const [formSubmittedState, setFormSubmittedState] = useState(false);
-
-
 
   const cardNumberInputHandler = (event) => {
     const input = event.target.value.replace(" ", ""); // Remove existing spaces
@@ -49,33 +46,33 @@ const CardForm = (props) => {
   const cardFormSubmitHandler = (event) => {
     event.preventDefault();
 
-    if (!/^[A-Za-z]+(?:\s[A-Za-z]+)+$/.test(fullName.current.value)) {
-      setFullNameError("Input your full name");
-    } else {
-      setFullNameError("");
-    }
+    setFullNameError(
+      `${
+        /^[A-Za-z]+(?:\s[A-Za-z]+)+$/.test(fullName.current.value)
+          ? ""
+          : "Enter your full name"
+      }`
+    );
 
-    if (!/^[0-9\s]+$/.test(getCardNumber.current.value)) {
-      setCardNumberError("Wrong Format, numbers only");
-    } else {
-      setCardNumberError("");
-    }
+    setCardNumberError(
+      `${
+        /^[0-9\s]+$/.test(getCardNumber.current.value)
+          ? ""
+          : "Wrong Format, numbers only"
+      }`
+    );
 
-    if (!/^(0[1-9]|1[0-2])$/.test(expMonth.current.value)) {
-      setExpMonthError("Invalid Input");
-    } else {
-      setExpMonthError("");
-    }
-    if (!/^[0-9]{2}$/.test(expYear.current.value)) {
-      setExpYearError("Invalid Year");
-    } else {
-      setExpYearError("");
-    }
-    if (!/^[0-9]+$/.test(cvv.current.value)) {
-      setCvvError("Invalid CVV");
-    } else {
-      setCvvError("");
-    }
+    setExpMonthError(
+      `${
+        /^(0[1-9]|1[0-2])$/.test(expMonth.current.value) ? "" : "Invalid Input"
+      }`
+    );
+
+    setExpYearError(
+      `${/^[0-9]{2}$/.test(expYear.current.value) ? "" : "Invalid Year"}`
+    );
+    setCvvError(`${/^\d{3}$/.test(cvv.current.value) ? "" : "Invalid CVV"}`);
+
     setFormSubmittedState(true);
   };
 

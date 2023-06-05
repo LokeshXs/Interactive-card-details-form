@@ -20,9 +20,9 @@ function App() {
     setCardInformation(newInfo);
   };
 
-  const updateCardState = (state) =>{
+  const updateCardState = (state) => {
     setCardAddedState(state);
-  }
+  };
 
   return (
     <div className="app">
@@ -32,7 +32,12 @@ function App() {
       </div>
 
       <div className="cardForm-section">
-        {cardAddedState || <CardForm updateCardInfo={updateCardInfo} updateCardState={updateCardState} />}
+        {cardAddedState || (
+          <CardForm
+            updateCardInfo={updateCardInfo}
+            updateCardState={updateCardState}
+          />
+        )}
 
         {cardAddedState && <ThankYou updateCardState={updateCardState} />}
       </div>
