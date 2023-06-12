@@ -1,12 +1,12 @@
 .cardFront {
   width: 90%;
-  height: 25rem;
   background: url("../../assets/bg-card-front.png");
   background-position: center;
   background-size: cover;
   border-radius: 1rem;
   display: flex;
   align-items: end;
+  aspect-ratio: 16/9;
 
 }
 
@@ -35,3 +35,59 @@
   font-size: 1.4rem;
   color: #fff;
 }
+
+@media (max-width:80em){
+  .card-number{
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:60em){
+  .card-owner-details--section{
+    font-size: 1.2rem;
+  }
+
+  .card-number{
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width:56em){
+  .cardFront{
+    width: 50%;
+  }
+
+  .card-owner-details--section{
+    font-size: 1.4rem;
+  }
+
+  .card-number{
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:45em){
+  
+
+  .cardFront{
+    width: 60%;
+  }
+
+
+}
+
+
+@media (max-width:34em){
+  
+
+  .cardFront{
+    width: 80%;
+  }
+
+  .card-number{
+    font-size: 1.2rem;
+  }
+
+
+}
+

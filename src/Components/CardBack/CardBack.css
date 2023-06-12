@@ -1,12 +1,13 @@
 .cardBack{
   width: 90%;
-  height: 25rem;
+
   background: url("../../assets/bg-card-back.png");
   background-position: center;
   background-size: cover;
   border-radius: 1rem;
   display: flex;
   align-items: end;
+  aspect-ratio: 16/9;
 }
 
 .card-cvv-number{
@@ -14,5 +15,46 @@
   margin-left: 85%;
   font-size: 1.8rem;
   color: #fff;
-  margin-bottom: 28%;
+  margin-bottom: 42%;
+}
+
+@media (max-width:80em){
+  .card-cvv-number{
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width:60em){
+  .card-cvv-number{
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width:56em){
+  .cardBack{
+    width: 50%;
+  }
+  .card-cvv-number{
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:45em){
+  
+
+  .cardBack{
+    width: 60%;
+  }
+
+
+}
+
+@media (max-width:34em){
+  
+
+  .cardBack{
+    width: 80%;
+  }
+
+
 }

@@ -3,7 +3,8 @@
   height: 100vh;
   /* background-color: aquamarine; */
   display: grid;
-  grid-template-columns: 30% 70%;
+ grid-template-columns: 30vw 1fr;
+  
 
 }
 
@@ -14,10 +15,44 @@
   gap: 4rem;
   align-items: center;
   justify-content: center;
+  background-size: cover;
+  /* min-width: 50rem; */
+  /* background-repeat: no-repeat; */
 }
 
 .cardForm-section{
   display: flex;
   align-items: center;
   justify-content: center;
+  /* min-width: 60rem; */
 }
+
+@media (max-width:56em){
+  .app{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 4rem;
+  }
+
+  .card-section{
+    padding: 2rem;
+  }
+
+  .card-section{
+    flex-direction: row;
+  }
+}
+
+@media (max-width:45em){
+  
+
+  .card-section{
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+

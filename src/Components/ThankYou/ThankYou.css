@@ -37,3 +37,40 @@
   0%{opacity: 0;transform: scale(1.2);}
   100%{opacity: 1;transform: scale(1);}
 }
+
+
+
+
+
+@media (max-width:60em){
+  .thank-msg {
+    font-size: 2rem;
+    
+  }
+
+  .success-msg {
+    font-size: 1.4rem;
+  }
+
+  .btn-continue {
+    font-size: 1.4rem;
+    
+  }
+
+  .thank-you-section {
+    width: 80%;
+    
+  }
+}
+
+
+
+@media (max-width:45em){
+  
+
+  .thank-msg {
+    font-size: 1.8rem;
+    
+  }
+
+}
